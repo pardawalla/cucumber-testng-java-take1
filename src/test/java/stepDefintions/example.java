@@ -1,10 +1,10 @@
-package stepDefintions;
+package StepDefintions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class example {
+public class Example {
 
     // Reference https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println#:~:text=If%20the%20console%20support%20(e.g.,for%20one%20color%20and%20System.
     public static final String ANSI_RESET = "\u001B[0m";

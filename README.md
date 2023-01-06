@@ -37,6 +37,9 @@ Aim: Create a BDD based framework using Cucumber, TestNG, using a Maven based Ja
     - cucumber-java: 7.10.0
     - cucumber-testng: 7.10.0
 - Maven Surefile Plugin: 3.0.0-M7
+- Selenium
+    - selenium-java
+    - [Install a Selenium library](https://www.selenium.dev/documentation/webdriver/getting_started/install_library/)
 
 ## Environment Setup
 ### Getting the cucumber tests to run
@@ -58,13 +61,20 @@ The cucumber integrated tests can be run via the terminal using `mvn test`, but 
     - [homepage](https://cucumber.io/)
     - [Checking Assertions - Using TestNG's assertions](https://cucumber.io/docs/cucumber/checking-assertions/#java)
     - [Tools](https://cucumber.io/docs/tools/general/)
-    - [10 Minute Tutorial](https://cucumber.io/docs/guides/10-minute-tutorial/?lang=java)
+    - Tutorials
+        - [10 Minute Tutorial](https://cucumber.io/docs/guides/10-minute-tutorial/?lang=java)
+        - [Cucumber + Selenium Java, LetCode with Koushik](https://www.youtube.com/playlist?list=PL699Xf-_ilW6oK3_otMtu7BPqiy0VlkE-) - For understanding Cucumber, Selneium and Java
+        - [Part 1- Cucumber (BDD) with TestNG](https://www.youtube.com/watch?v=XnkNsl88vho) - For settin up Eclipse and configurations
+        - [Cucumber JVM: Hooks](https://zsoltfabok.com/blog/2012/09/cucumber-jvm-hooks/)
+    - Examples
+        - CucumberOptions settings: https://stackoverflow.com/questions/70711506/how-to-execute-test-runner-with-multiple-tags-in-cucumber
 - Maven
     - https://maven.apache.org/install.html
     - https://maven.apache.org/download.cgi
-- Tutorials
-    - [Cucumber + Selenium Java, LetCode with Koushik](https://www.youtube.com/playlist?list=PL699Xf-_ilW6oK3_otMtu7BPqiy0VlkE-) - For understanding Cucumber, Selneium and Java
-    - [Part 1- Cucumber (BDD) with TestNG](https://www.youtube.com/watch?v=XnkNsl88vho) - For settin up Eclipse and configurations 
+
+
+## Future Task list
+[ ] Look into https://reports.cucumber.io/
 
 ## Troubleshooting
 - [VSCode Maven error `The compiler compliance specified is 1.7 but a JRE 17 is used`](https://stackoverflow.com/questions/60498063/vscode-maven-error-the-compiler-compliance-specified-is-1-7-but-a-jre-13-is-use)

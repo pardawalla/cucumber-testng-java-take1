@@ -10,8 +10,8 @@ import io.cucumber.testng.CucumberOptions.SnippetType;;
     features = "src/test/resources/featureFiles/",
     // The glue needs the package name in which the step definitions classes live. 
     glue = {"stepDefintions", "hooks"},
-    dryRun = true,
-    //Note if dryRun is true, System.out.println or System.err.println won't print to the console. 
+    // Note if dryRun is true, System.out.println or System.err.println won't print to the console.
+    dryRun = true,  
     snippets = SnippetType.CAMELCASE,
     monochrome = true
 )

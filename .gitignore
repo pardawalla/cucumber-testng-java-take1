@@ -1,4 +1,5 @@
 # Files to ignore
+test-ouput/
 # src/test/resources/drivers/*
 # !src/test/resources/drivers/.placeholder
 # src/test/resources/data.txt

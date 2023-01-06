@@ -62,12 +62,20 @@ The cucumber integrated tests can be run via the terminal using `mvn test`, but 
 - Maven
     - https://maven.apache.org/install.html
     - https://maven.apache.org/download.cgi
-- Setup
-    - [Part 1- Cucumber (BDD) with TestNG](https://www.youtube.com/watch?v=XnkNsl88vho)
+- Tutorials
+    - [Cucumber + Selenium Java, LetCode with Koushik](https://www.youtube.com/playlist?list=PL699Xf-_ilW6oK3_otMtu7BPqiy0VlkE-) - For understanding Cucumber, Selneium and Java
+    - [Part 1- Cucumber (BDD) with TestNG](https://www.youtube.com/watch?v=XnkNsl88vho) - For settin up Eclipse and configurations 
 
 ## Troubleshooting
 - [VSCode Maven error `The compiler compliance specified is 1.7 but a JRE 17 is used`](https://stackoverflow.com/questions/60498063/vscode-maven-error-the-compiler-compliance-specified-is-1-7-but-a-jre-13-is-use)
 - Maven build failures:
+    - Error
+    ```
+    SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+    SLF4J: Defaulting to no-operation (NOP) logger implementation
+    SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+    ```
+    Add the SLF4J dependencies to the pom.xml. See https://stackoverflow.com/questions/7421612/slf4j-failed-to-load-class-org-slf4j-impl-staticloggerbinder
 
     - In the terminal enter the command `mvn -e test`, and this resulted with the error:
      `org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project take1: There are test failures.`

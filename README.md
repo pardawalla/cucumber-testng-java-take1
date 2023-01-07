@@ -5,7 +5,12 @@ Aim: Create a BDD based framework using Cucumber, TestNG, using a Maven based Ja
 Working Tests:
 - ***Web UI test:***  
   - *Scenario: Find and verify details of an existing user car listing on Trademe* 
-
+        This scenario using the listing # and the number plate as the keywords. Currently it is checking for the listing with id # 3897609660 and number plate NEC128. If the test fails please check that the listing still exists. If it doesn't update the test data to match an existing listing. 
+- ***API tests:***
+    - *Scenario: St John is in the list of charities in Trandme Sandbox environment*
+        Using the TradeMe Sandbox environment retrieve a list of charities, and confirm that `St John` is included in the list.
+    - *Scenario: I can make a POST Request*
+        Send a post request, and verify that it was successful using httpbin.org
 ## Dev Env
 - Editor: VScode
 - OS: macOS Ventura 13.1
@@ -43,6 +48,9 @@ Working Tests:
 - Selenium
     - selenium-java
     - [Install a Selenium library](https://www.selenium.dev/documentation/webdriver/getting_started/install_library/)
+- - Aapache HttpClient 5.2.1 API
+  - https://hc.apache.org/httpcomponents-client-5.2.x/index.html
+  - https://hc.apache.org/httpcomponents-client-5.2.x/current/httpclient5/apidocs/overview-summary.html
 
 ## Environment Setup
 ### Getting the cucumber tests to run
@@ -69,11 +77,17 @@ The cucumber integrated tests can be run via the terminal using `mvn test`, but 
         - [Cucumber + Selenium Java, LetCode with Koushik](https://www.youtube.com/playlist?list=PL699Xf-_ilW6oK3_otMtu7BPqiy0VlkE-) - For understanding Cucumber, Selneium and Java
         - [Part 1- Cucumber (BDD) with TestNG](https://www.youtube.com/watch?v=XnkNsl88vho) - For settin up Eclipse and configurations
         - [Cucumber JVM: Hooks](https://zsoltfabok.com/blog/2012/09/cucumber-jvm-hooks/)
-    - Examples
+        - [Cucumber Data Tables](https://www.baeldung.com/cucumber-data-tables)
+        - [Using data table types in Cucumber-JVM](https://www.ontestautomation.com/using-data-table-types-in-cucumber-jvm/)
+    - Examples/Sample Code
         - CucumberOptions settings: https://stackoverflow.com/questions/70711506/how-to-execute-test-runner-with-multiple-tags-in-cucumber
 - Maven
     - https://maven.apache.org/install.html
     - https://maven.apache.org/download.cgi
+- Java
+    - Examples/Sample Code
+        -[How to convert a String into an ArrayList?](https://stackoverflow.com/questions/7347856/how-to-convert-a-string-into-an-arraylist)
+        -[Using data table types in Cucumber-JVM](https://github.com/basdijkstra/ota-examples/tree/master/cucumber-data-tables/src/test/java/stepdefinitions)
 
 
 ## Future Task list

@@ -15,8 +15,9 @@ import io.cucumber.testng.CucumberOptions.SnippetType;;
     monochrome = true, 
     plugin = {"pretty"},
     // tags = "@example or @webUI"
-    tags = "@webUI"
+    // tags = "@webUI"
     // tags = "@example"
+    tags = "@apiTests"
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests{

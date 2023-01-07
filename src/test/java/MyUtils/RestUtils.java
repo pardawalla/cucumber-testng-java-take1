@@ -10,16 +10,11 @@ import org.apache.hc.client5.http.fluent.Request;
 import org.apache.hc.client5.http.fluent.Response;
 import org.apache.hc.core5.http.io.entity.StringEntity;
 
-import MyUtils.SysOutPrintlnColored;
-
 public class RestUtils {
 
     static SysOutPrintlnColored printToConsole = new SysOutPrintlnColored();
 
-    // Get request
-    // Reference:
-    // https://www.springcloud.io/post/2022-08/httpclient5/#gsc.tab=0
-
+    // Get request (Reference: https://www.springcloud.io/post/2022-08/httpclient5/#gsc.tab=0)
     public static String getRequest(String url) {
         String result = null;
         try {

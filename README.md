@@ -11,9 +11,15 @@ Working Tests:
         Using the TradeMe Sandbox environment retrieve a list of charities, and confirm that `St John` is included in the list.
     - *Scenario: I can make a POST Request*
         Send a post request, and verify that it was successful using httpbin.org
+
+Only the Chrome browser is supported for the web UI tests. All dev and testing was done using the Chrome browser and the VS Code editor. 
+
+To run the tests from the project directory, using the terminal run the command `mvn clean test`
+
 ## Dev Env
 - Editor: VScode
 - OS: macOS Ventura 13.1
+- Browser: Chrome Version 108.0.5359.124 (Official Build) (x86_64)
 
 
 ## Requirements
@@ -55,7 +61,7 @@ Working Tests:
 ## Environment Setup
 ### Getting the cucumber tests to run
 - Using VS Code create the Java Project using the sample archtype
-- Using the pom.xml here as an example added the required dependencies. 
+- Using the pom.xml [here](https://github.com/pardawalla/automation-test-v2/blob/main/pom.xml) as an example added the required dependencies. 
 - use `mvn test` to run the test. 
 
 ### Notes:

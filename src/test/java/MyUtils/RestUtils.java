@@ -1,12 +1,21 @@
 package MyUtils;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.HashMap;
 
 import org.apache.hc.client5.http.fluent.Request;
 import org.apache.hc.client5.http.fluent.Response;
 import org.apache.hc.core5.http.io.entity.StringEntity;
 
+import MyUtils.SysOutPrintlnColored;
+
 public class RestUtils {
+
+    static SysOutPrintlnColored printToConsole = new SysOutPrintlnColored();
+
     // Get request
     // Reference:
     // https://www.springcloud.io/post/2022-08/httpclient5/#gsc.tab=0
@@ -31,16 +40,9 @@ public class RestUtils {
         Response resp = null;
         Request request = Request.post(url).setHeader("Content-type", "application/json");
 
-        // Crrently using a fake token as proof of concenpt to show how POST requests
-        // can be made using bearer auth tokens
-        String fakeBearerToken = "myRandomBearerTokeneyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
-        request.setHeader("Authorization", "Bearer " + fakeBearerToken);
+        String BearerToken = getBearerToken();
+        request.setHeader("Authorization", "Bearer " + BearerToken);
 
-        // JSON parameter string
-        // The https://jsontostring.com/ site can be easily used to covert a JSON object
-        // to a JSON String.
-        // String jsonRequest =
-        // "{\"ExistingListingId\":123,\"Category\":\"ABC\",\"Title\":\"ABC\",\"Subtitle\":\"ABC\",\"Description\":[\"ABC\",\"ABC\"],\"StartPrice\":123.0,\"ReservePrice\":123.0,\"BuyNowPrice\":123.0,\"Duration\":0,\"EndDateTime\":\"\\/Date(1514764800)\\/\",\"Pickup\":0,\"PickupSuburbId\":123,\"IsBrandNew\":false,\"AuthenticatedMembersOnly\":false,\"IsClassified\":false,\"OpenHomes\":[{\"Start\":\"\\/Date(1514764800)\\/\",\"End\":\"\\/Date(1514764800)\\/\"},{\"Start\":\"\\/Date(1514764800)\\/\",\"End\":\"\\/Date(1514764800)\\/\"}]}";
         String jsonRequest = jsonData;
         StringEntity jsonRequestEntity = new StringEntity((jsonRequest));
         request = request.body(jsonRequestEntity);
@@ -50,5 +52,25 @@ public class RestUtils {
             e.printStackTrace();
         }
         return resp;
+    }
+
+    // helper method
+    private static String getBearerToken() throws IOException {
+        // References:
+        // https://stackoverflow.com/questions/326390/how-do-i-create-a-java-string-from-the-contents-of-a-file
+        // https://reactgo.com/java-convert-string-to-path/
+        String workingDir = System.getProperty("user.dir");
+        String myDataTxtPath = workingDir + "/src/test/resources/data.txt";
+        String bearerToken = Files.readString(Paths.get(myDataTxtPath), StandardCharsets.UTF_8);
+        printToConsole.purplePrint(bearerToken);
+        // Reference :
+        // https://stackoverflow.com/questions/29061782/java-read-txt-file-to-hashmap-split-by
+        HashMap<String, String> map = new HashMap<String, String>();
+        String[] parts = bearerToken.split(":", 2);
+        String key = parts[0];
+        String value = parts[1];
+        map.put(key, value);
+        printToConsole.purplePrint("BEARER_TOKEN is " + map.get("BEARER_TOKEN"));
+        return(map.get("BEARER_TOKEN"));
     }
 }

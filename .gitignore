@@ -2,7 +2,7 @@
 test-ouput/
 src/test/resources/drivers/*
 !src/test/resources/drivers/.placeholder
-# src/test/resources/data.txt
+src/test/resources/data.txt
 
 # Mac OS generated files 
 .DS_Store

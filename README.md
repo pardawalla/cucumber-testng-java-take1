@@ -14,7 +14,10 @@ Working Tests:
 
 Only the Chrome browser is supported for the web UI tests. All dev and testing was done using the Chrome browser and the VS Code editor. 
 
-To run the tests from the project directory, using the terminal run the command `mvn clean test`
+### To run the tests:
+- First rename data.txt.eample to data.txt, and then
+- from the project directory, using the terminal run the command `mvn clean test`
+The POST requests uses bearer auth tokens to make the requests. So the idea of data.txt.example is to show how one can store the token in a file. data.txt is not tracked, thus ensuring the token isn't accidently committed to the repo by mistake. httpbin.org is a test site, so that's why there is no need to update the bearer token, as it excepts fake tokens. 
 
 ## Dev Env
 - Editor: VScode
@@ -94,6 +97,8 @@ The cucumber integrated tests can be run via the terminal using `mvn test`, but 
     - Examples/Sample Code
         -[How to convert a String into an ArrayList?](https://stackoverflow.com/questions/7347856/how-to-convert-a-string-into-an-arraylist)
         -[Using data table types in Cucumber-JVM](https://github.com/basdijkstra/ota-examples/tree/master/cucumber-data-tables/src/test/java/stepdefinitions)
+- JSON
+    The https://jsontostring.com/ site can be easily used to covert a JSON object to a JSON String.
 
 
 ## Future Task list

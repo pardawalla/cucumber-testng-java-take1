@@ -17,6 +17,7 @@ import io.cucumber.testng.CucumberOptions.SnippetType;;
     // tags = "@example or @webUI"
     // tags = "@webUI"
     // tags = "@example"
+    // tags = "@apiTests"
     tags = "@apiTests or @webUI"
 )
 

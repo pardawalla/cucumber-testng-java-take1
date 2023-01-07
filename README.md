@@ -1,7 +1,10 @@
 # Test Project: TAKE 1
 
 ## Overview
-Aim: Create a BDD based framework using Cucumber, TestNG, using a Maven based Java Project. 
+Aim: Create a BDD based framework using Cucumber, TestNG, using a Maven based Java Project. Using Selenium webdriver for web browser automation. 
+Working Tests:
+- ***Web UI test:***  
+  - *Scenario: Find and verify details of an existing user car listing on Trademe* 
 
 ## Dev Env
 - Editor: VScode

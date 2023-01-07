@@ -1,4 +1,4 @@
-package TmSearchUsedCarsSteps;
+package StepDefintions;
 
 import java.time.Duration;
 import java.util.ArrayList;

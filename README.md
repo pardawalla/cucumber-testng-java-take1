@@ -15,9 +15,11 @@ Working Tests:
 Only the Chrome browser is supported for the web UI tests. All dev and testing was done using the Chrome browser and the VS Code editor. 
 
 ### To run the tests:
-- First rename `data.txt.eample` file to `data.txt`
-- From the project directory, on a terminal, run the command `mvn clean test`
-The POST requests uses bearer auth tokens to make the requests. So the idea of `data.txt.example` is to show how one can store the token in a file. As `data.txt` is not tracked, it provides a safe guard from the token being accidently committed to the repo by mistake. httpbin.org is a test site, so that's why there is no need to update the bearer token, as it excepts fake tokens. 
+- Download the appropriate version of the ChromeDriver, (based on your OS and Chrome ver), from [here](https://chromedriver.chromium.org/downloads), and place it the `../src/test/resources/drivers/` folder. Please ensure the name of the dirver is `chromedriver`, and not `chromedriver.exe` etc. 
+- Check the listing `https://www.trademe.co.nz/a/motors/cars/toyota/c-hr/listing/3897609660` still exists. If not, find another used car listing and upate the scenario data in the 'src/test/resources/featureFiles/TmSearchUsedCars.feature' file
+- Rename `data.txt.eample` file to `data.txt`
+   Note: The POST requests uses bearer auth tokens to make the requests. So the idea of `data.txt.example` is to show how one can store the token in a file. As `data.txt` is not tracked, it provides a safe guard from the token being accidently committed to the repo by mistake. httpbin.org is a test site, so that's why there is no need to update the bearer token, as it excepts fake tokens.
+- From the project directory, on a terminal, run the command `mvn clean test` 
 - The result run can also be viewed using the html file found at `src/target/cucumber-reports/index.html`
 
 ## Dev Env

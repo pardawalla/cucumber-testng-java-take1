@@ -98,7 +98,8 @@ The cucumber integrated tests can be run via the terminal using `mvn test`, but 
         -[How to convert a String into an ArrayList?](https://stackoverflow.com/questions/7347856/how-to-convert-a-string-into-an-arraylist)
         -[Using data table types in Cucumber-JVM](https://github.com/basdijkstra/ota-examples/tree/master/cucumber-data-tables/src/test/java/stepdefinitions)
 - JSON
-    The https://jsontostring.com/ site can be easily used to covert a JSON object to a JSON String.
+    - The https://jsontostring.com/ site can be easily used to covert a JSON object to a JSON String.
+    - [JSON Escape / Unescape](https://www.freeformatter.com/json-escape.html): Escapes or unescapes a JSON string removing traces of offending characters that could prevent parsing.
 
 
 ## Future Task list

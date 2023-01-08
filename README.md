@@ -1,7 +1,7 @@
 # Test Project: TAKE 1
 
 ## Overview
-Aim: Create a BDD based framework using Cucumber, TestNG, using a Maven based Java Project. Using Selenium webdriver for web browser automation. 
+Aim: Create a BDD based framework using Cucumber, TestNG, using a Maven based Java Project. Using Selenium webdriver for web browser automation, and App]ache HTTPClient v5 for the REST API tests. 
 Working Tests:
 - ***Web UI test:***  
   - *Scenario: Find and verify details of an existing user car listing on Trademe* 
@@ -57,7 +57,7 @@ The POST requests uses bearer auth tokens to make the requests. So the idea of d
 - Selenium
     - selenium-java
     - [Install a Selenium library](https://www.selenium.dev/documentation/webdriver/getting_started/install_library/)
-- - Aapache HttpClient 5.2.1 API
+- Aapache HttpClient 5.2.1 API
   - https://hc.apache.org/httpcomponents-client-5.2.x/index.html
   - https://hc.apache.org/httpcomponents-client-5.2.x/current/httpclient5/apidocs/overview-summary.html
 

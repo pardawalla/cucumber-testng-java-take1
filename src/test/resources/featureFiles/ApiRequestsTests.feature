@@ -1,6 +1,5 @@
-Feature: Is it Friday yet?
-  Everybody wants to know when it's Friday
-  Based on the 10 minute tutorial https://cucumber.io/docs/guides/10-minute-tutorial/?lang=java
+Feature: API Tests
+  Sample API tests that make GET and POST requests
 
   @apiTests
   Scenario: St John is in the list of charities in Trandme Sandbox environment

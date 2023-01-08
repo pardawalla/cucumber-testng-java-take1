@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions.SnippetType;;
     // dryRun = true,  
     snippets = SnippetType.CAMELCASE,
     monochrome = true, 
-    plugin = {"pretty"},
+    plugin = {"pretty", "html:src/target/cucumber-reports/index.html"},
     // tags = "@example or @webUI"
     // tags = "@webUI"
     // tags = "@example"

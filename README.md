@@ -15,9 +15,9 @@ Working Tests:
 Only the Chrome browser is supported for the web UI tests. All dev and testing was done using the Chrome browser and the VS Code editor. 
 
 ### To run the tests:
-- First rename data.txt.eample to data.txt, and then
-- from the project directory, using the terminal run the command `mvn clean test`
-The POST requests uses bearer auth tokens to make the requests. So the idea of data.txt.example is to show how one can store the token in a file. data.txt is not tracked, thus ensuring the token isn't accidently committed to the repo by mistake. httpbin.org is a test site, so that's why there is no need to update the bearer token, as it excepts fake tokens. 
+- First rename `data.txt.eample` file to `data.txt`
+- From the project directory, on a terminal, run the command `mvn clean test`
+The POST requests uses bearer auth tokens to make the requests. So the idea of `data.txt.example` is to show how one can store the token in a file. As `data.txt` is not tracked, it provides a safe guard from the token being accidently committed to the repo by mistake. httpbin.org is a test site, so that's why there is no need to update the bearer token, as it excepts fake tokens. 
 - The result run can also be viewed using the html file found at `src/target/cucumber-reports/index.html`
 
 ## Dev Env
